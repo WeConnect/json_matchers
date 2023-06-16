@@ -160,7 +160,7 @@ In this case `"post.json"` will be resolved relative to
 
 To learn more about `$ref`, check out [Understanding JSON Schema Structuring](http://spacetelescope.github.io/understanding-json-schema/structuring.html)
 
-## Upgrading from `0.9.x`
+## Upgrading from `0.9.0`
 
 Calls to `match_json_schema` and `match_response_schema` no longer accept
 options, and `JsonMatchers.configure` has been removed.

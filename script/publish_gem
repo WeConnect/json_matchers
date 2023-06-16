@@ -1,0 +1,20 @@
+#!/bin/sh
+set -ex
+
+# mkdir ~/.gem
+# curl https://wework.jfrog.io/artifactory/api/gems/ruby/api/v1/api_key.yaml -u $ARTIFACTORY_USER:$ARTIFACTORY_APIKEY >~/.gem/credentials
+# chmod 0600 ~/.gem/credentials
+
+# Determine the version from the tag; remove the leading v "v3.3.0" -> "3.3.0"
+# VERSION=$(echo "${CIRCLE_TAG}" | sed 's/^v//')
+# echo "${VERSION}" >version.txt
+gem build *.gemspec
+
+# Determine publishing repository. Snapshot/transient, vs final releases.
+case "${CIRCLE_TAG}" in
+*snapshot*) GEM_HOST="https://wework.jfrog.io/wework/api/gems/ruby-snapshots-local" ;;
+*) GEM_HOST="https://wework.jfrog.io/wework/api/gems/ruby-local" ;;
+esac
+
+gem push *.gem --host "${GEM_HOST}"
+

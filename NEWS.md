@@ -1,6 +1,9 @@
 master
 ======
 
+0.9.1
+=====
+
 * *Breaking Change* - remove support for configuring validation options.
 
 0.9.0
