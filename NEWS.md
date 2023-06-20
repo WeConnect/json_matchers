@@ -4,7 +4,12 @@ master
 0.9.1
 =====
 
+* This version intended to avoid breaking changes from v 0.10.0 original json_matchers repo and to Ruby > 3
+* based on commit [48e76205668ca25dede0b5143d231d80d9bd267b] with minor changes
+* *Ruby 3.0.6* - updated supporting ruby version
 * *Breaking Change* - remove support for configuring validation options.
+
+[48e76205668ca25dede0b5143d231d80d9bd267b]: https://github.com/thoughtbot/json_matchers/commit/48e76205668ca25dede0b5143d231d80d9bd267b
 
 0.9.0
 =====

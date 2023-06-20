@@ -2,6 +2,12 @@
 
 Validate the JSON returned by your Rails JSON APIs
 
+## ⚠️ Fork intentions ⚠️
+
+This version intended to avoid breaking changes from v 0.10.0 original json_matchers repo and to Ruby > 3
+
+Based on commit original [48e76205668ca25dede0b5143d231d80d9bd267b] with minor changes
+
 ## Installation
 
 Add this line to your application's `Gemfile`:
